@@ -4,7 +4,7 @@ const taskContainer = document.getElementById("task-container");
 const inputTask = document.getElementById("input-task");
 //event listeners
 addTask.addEventListener("click", () => {
-  let task = document.createElement("div");
+  let task = document.createElement("ul");
   task.classList.add("task");
   let li = document.createElement("li");
   li.innerText = `${inputTask.value}`;
@@ -34,6 +34,6 @@ addTask.addEventListener("click", () => {
   });
   deleteBtn.addEventListener("click", (e) => {
     let target = e.target;
-    target.parentElement.parentElement.remove();
+    target.parentElement.remove();
   });
 });
